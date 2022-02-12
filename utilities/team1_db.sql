@@ -31,8 +31,16 @@ CREATE TABLE `admin` (
   `adminID` int NOT NULL,
   `name` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `password` varchar(20) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `username` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+/* Hash the password before insert
+<?php
+echo password_hash("password",PASSWORD_DEFAULT);
+
+?>
+*/
 
 -- --------------------------------------------------------
 
