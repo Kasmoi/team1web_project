@@ -23,20 +23,19 @@ body{
 
 
 .login-box {
-	width: 200px;
+	width: 280px;
 	position: absolute;
 	top: 40%;
-	left: 40%;
+	left: 50%;
 	transform: translate(-50%, -50%);
 	color: var(--primary-color);
-    
 }
 
 .login-box h1 {
-
+	width: 100%;
 	font-size: 20px;
-	margin-bottom: 40px;
-	padding: 5px;
+	margin-bottom: 50px;
+	padding: 13px;
     text-transform: uppercase;
     background-color: #CB212E;
     color: #FFFFFF;
@@ -46,6 +45,7 @@ body{
 
 .textbox {
 	width: 100%;
+	display: flex;
 	overflow: hidden;
 	font-size: 20px;
 	padding: 8px 0;
@@ -56,6 +56,7 @@ body{
 .fa {
 	width: px;
 	text-align: center;
+	
 }
 
 .textbox input {

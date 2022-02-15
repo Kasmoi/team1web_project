@@ -1,6 +1,4 @@
 <?php
 session_start();
-Welcome Admin
-
-
+echo "Welcome Admin"
 ?>

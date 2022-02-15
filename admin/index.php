@@ -1,6 +1,6 @@
 <?php 
     $title = "Admin Login";
-    require("./inc/header.php");
+    require("./inc/head.php");
     $errorMsg = " ";
  ?>
 <body>

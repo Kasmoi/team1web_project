@@ -38,7 +38,6 @@ CREATE TABLE `admin` (
 /* Hash the password before insert
 <?php
 echo password_hash("password",PASSWORD_DEFAULT);
-
 ?>
 */
 
