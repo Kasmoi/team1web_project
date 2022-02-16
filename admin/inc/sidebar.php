@@ -11,16 +11,16 @@
             <div id ="dropdown-menu" class="dropdown-content">
             <a href="#">Create</a>
             <a href="#">View</a>
-            </div>   
+            </div>
         </div>
         <div class="aside_menu-item dropdown">
             <button class="dropbtn">Membership
             <i class="fa fa-caret-down"></i>
             </button>
             <div id ="dropdown-menu" class="dropdown-content">
-            <a href="#">Create</a>
-            <a href="#">View</a>
-            </div>   
+            <a href="../core/create_membership.php">Create</a>
+            <a href="../view_membership.php">View</a>
+            </div>
         </div>
         <div class="aside_menu-item dropdown">
             <button class="dropbtn">Trainers
@@ -29,7 +29,7 @@
             <div id ="dropdown-menu" class="dropdown-content">
             <a href="#">Create</a>
             <a href="#">View</a>
-            </div>   
+            </div>
         </div>
         <div class="aside_menu-item dropdown">
             <button class="dropbtn">GalleryImages
@@ -38,7 +38,7 @@
             <div id ="dropdown-menu" class="dropdown-content">
             <a href="#">Create</a>
             <a href="#">View</a>
-            </div>   
+            </div>
         </div>
         <div class="aside_menu-item dropdown">
             <button class="dropbtn">Sliders
@@ -47,7 +47,7 @@
             <div id ="dropdown-menu" class="dropdown-content">
             <a href="#">Create</a>
             <a href="#">View</a>
-            </div>   
+            </div>
         </div>
     </div>
 </aside>
