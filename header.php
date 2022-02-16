@@ -5,7 +5,7 @@
         <div class="grad-bar"></div>
         <div class="container">
           <nav class="navbar">
-            <a class="nav-brand" href="#"><img src="uploads/logo/footer-logo.png" alt="logo image"></a>
+            <a class="nav-brand" href="#"><img src="uploads/logo/logo.png" alt="logo image"></a>
             <div class="menu-toggle" id="mobile-menu">
               <span class="bar"></span>
               <span class="bar"></span>
