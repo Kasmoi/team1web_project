@@ -81,10 +81,10 @@ CREATE TABLE `membership` (
 -- --------------------------------------------------------
 
 --
--- Rakenne taululle `slider`
+-- Rakenne taululle `sliders`
 --
 
-CREATE TABLE `slider` (
+CREATE TABLE `sliders` (
   `sliderID` int NOT NULL,
   `sliderText` varchar(50) NOT NULL,
   `imgPath` varchar(200) NOT NULL
