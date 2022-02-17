@@ -86,8 +86,8 @@ CREATE TABLE `membership` (
 
 CREATE TABLE `sliders` (
   `sliderID` int NOT NULL,
-  `sliderText` varchar(50) NOT NULL,
-  `imgPath` varchar(200) NOT NULL
+  `sliderText` varchar(255) NOT NULL,
+  `imgName` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------

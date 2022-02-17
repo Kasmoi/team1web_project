@@ -3,6 +3,7 @@
     require("../inc/head.php");
     require("../inc/header.php");
     require("../inc/sidebar.php");
+    require("../core/slider.php")
  ?>
 
 <main>
@@ -20,21 +21,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 2</td>
-        </tr>
-        <tr>
-            <td>Row 2 Data 1</td>
-            <td>Row 2 Data 2</td>
-            <td>Row 2 Data 2</td>
-        </tr>
-        <tr>
-            <td>Row 2 Data 1</td>
-            <td>Row 2 Data 2</td>
-            <td>Row 2 Data 2</td>
-        </tr>
+        <?php selectData(); ?>
     </tbody>
 </table>
     
@@ -46,7 +33,7 @@
     $(document).ready( function () {
     $('#table_id').DataTable( {
         "searching":false,
-        
+
     }
        
     );
