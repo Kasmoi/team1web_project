@@ -7,6 +7,6 @@
           <li class="aside_list-item"><a href=""><i class="fa-solid fa-users"></i> Memberships</a></li>
           <li class="aside_list-item"><a href=""><i class="fa-solid fa-dumbbell"></i> Trainers</a></li>
           <li class="aside_list-item"><a href=""><i class="fa-solid fa-images"></i> Gallery</a></li>
-          <li class="aside_list-item"><a href="/team1web_project/admin/slider/create.php"><i class="fa-solid fa-sliders"></i> Sliders</li></a>
+          <li class="aside_list-item"><a href="/team1web_project/admin/slider/index.php"><i class="fa-solid fa-sliders"></i> Sliders</li></a>
         </ul>
       </aside>
