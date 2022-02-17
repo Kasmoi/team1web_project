@@ -75,7 +75,7 @@ CREATE TABLE `membership` (
   `membershipID` int NOT NULL,
   `title` varchar(25) NOT NULL,
   `description` varchar(200) NOT NULL,
-  `price` float NOT NULL
+  `price` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
