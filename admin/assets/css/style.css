@@ -103,18 +103,16 @@ body{
 
   .aside {
 	grid-area: aside;
-	background-color:var(--primary-color);
+	background-color: var(--primary-color);
   }
 
   .main {
 	grid-area: main;
-	background-color:var(--white);
-
+	background-color: white;
   }
   .footer {
 	grid-area: footer;
-	background-color: var(--white);
-	
+	background-color: whitesmoke;
   }
 
   /* flexing header and footer*/
@@ -126,6 +124,7 @@ body{
 	color: var(--primary-color);
 	padding: 0 15px;
   }
+
   /* flexing aside */
   .aside {
 	display: flex;
@@ -142,64 +141,46 @@ body{
 	transform: translateX(0);
   }
 
-  .aside_menu {
+  .aside_list {
 	padding: 0;
-	margin-top: 50px;
-	
+	margin-top: 85px;
+	list-style-type: none;
   }
 
-  .admin-info{
-	padding: 6px 8px 20px 16px;
-	color: #ddd;
-	font-size: 20px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
+  .aside_list-item {
+	padding: 20px 20px 20px 40px;
+	
   }
-/* Style the sidenav links and the dropdown button */
-.dropbtn {
-	padding: 6px 8px 10px 40px;
-	text-decoration: none;
-	font-size: 20px;
-	display: block;
-	border: none;
-	background: none;
-	color:whitesmoke;
-	width:100%;
-	text-align: left;
+  .aside_list-item a {
+	  text-decoration: none;
+	  color: #ddd;
+  }
+  .aside_list-item:hover {
+	background-color: royalblue;
 	cursor: pointer;
-	outline: none;
   }
-  
-  /* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-	display: none;
-	background-color: #e73040;
-	padding:8px;
-	
-	
+
+  /* Layout for main content overview  and its cards*/
+  .main_overview {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	border-bottom: 1px solid lightgreen;
   }
-  .dropdown-content a {
-	font-size: 20px;
-	color:aliceblue;
-	padding: 6px 8px 6px 40px;
-	text-decoration: none;
-	display: block;
+  .overview_card {
+	flex-basis: 250px;
+	flex-grow: 1;
+	margin: 10px 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px;
+	/* background-color: seagreen; */
+	height: 100px;
+	border: 1px solid darkblue;
+	border-radius: 4px;
+	color: darkblue;
   }
-  /* Add an active class to the active dropdown button */
-.active {
-	background-color:#ff0015 ;
-	color:var(--white);
-  }
-  /* On mouse-over */
-.dropdown-content a:hover, .dropdown-btn:hover {
-	color: #f1f1f1;
-  }
-/* Optional: Style the caret down icon */
-.fa-caret-down {
-	float: right;
-	padding-right: 8px;
-  }
-  
   /* Layout for main-cards section // below main_overview */
   .main_cards {
 	margin: 10px;
@@ -274,7 +255,9 @@ body{
 	color: black;
   }
 
- 
+  .header_search {
+	margin-left: 24px;
+  }
 
   .aside_close-icon {
 	position: absolute;
