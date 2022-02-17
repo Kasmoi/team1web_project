@@ -31,12 +31,12 @@
     
             if (move_uploaded_file($temp_name, $folder)) {
                 
-                // query to insert the file path of the image to database
+                // query to insert the name of the image to database
     
-                $sql = "insert into sliders(sliderText,imgPath) VALUES ('$slider_txt','$folder')";
+                $sql = "insert into sliders(sliderText,imgName) VALUES ('$slider_txt','$file_name')";
 
                 //query to the database
-                $conn=db_query($sql);
+                db_query($sql);
     
                 header("location:../slider/index.php?msg=New Slider Added Successfully");
     
@@ -55,6 +55,29 @@
         createSlider();
     }
 
+    function selectData(){
+        $query = "select * from sliders order by sliderId DESC;";
+        $data = db_query($query);
+        if($data == false){
+            echo "Database Errors".db_error();
+
+        }else{
+            
+            if(mysqli_num_rows($data) > 0) {
+                // output data of each row
+                while($row = mysqli_fetch_assoc($data)) {
+                    echo "<tr>";
+                    echo "<td>".$row["sliderText"]."</td>";
+                   echo "<td><img width=\"300\" height=\"150\" src=\"/team1web_project/uploads/slider/".$row["imgName"]."\"></td>";
+                   echo "<td><a class=\"action-btn\" href =\"\">Edit</a>&nbsp;&nbsp;<a class=\"action-btn\" href =\"\">Delete</a></td>";
+                   echo "</tr>";
+                }
+              } else {
+                echo "<tr>No data found</tr>";
+              }
+        }
+        
+    }
     
     ?>
 
