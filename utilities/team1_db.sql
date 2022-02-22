@@ -62,7 +62,7 @@ CREATE TABLE `blog` (
 
 CREATE TABLE `gallery` (
   `galleryID` int NOT NULL,
-  `imgPath` varchar(200) NOT NULL
+  `imgName` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
@@ -101,7 +101,7 @@ CREATE TABLE `trainers` (
   `name` varchar(50) NOT NULL,
   `description` varchar(200) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `imgPath` varchar(200) NOT NULL
+  `imgName` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
