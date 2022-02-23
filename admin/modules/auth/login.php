@@ -1,6 +1,6 @@
 <?php
-require '../../database/querybuilder.php';
-include '../utils/validate.php';
+require '../../../database/querybuilder.php';
+include '../../utils/validate.php';
 #echo password_hash("admin",PASSWORD_DEFAULT);
 
 function login(){
@@ -9,7 +9,7 @@ function login(){
     $password = validate_input($_POST['password']);
 
     if(empty($username)  || empty($password)){
-        header("location:../index.php?error=Username and Password cannot be empty");
+        header("location:../../index.php?error=Username and Password cannot be empty");
         exit();
     }else{
         $query="select * from admin where username = '$username'";
@@ -20,14 +20,14 @@ function login(){
                     session_start();
                     $_SESSION['loggedin'] = true;
                     $_SESSION['username'] = $username;
-                    header("location:../dashboard.php");
+                    header("location:../../dashboard/main/");
                 }else{
-                    header("location:../index.php?error=Invalid username or password");
+                    header("location:../../index.php?error=Invalid username or password");
                 }
             }
 
         }else{
-            header("location:../index.php?error=Invalid username or password");
+            header("location:../../index.php?error=Invalid username or password");
         }
 
     }

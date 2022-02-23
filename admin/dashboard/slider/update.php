@@ -1,9 +1,9 @@
 <?php 
     $title = "Update Slider";
-    require("../inc/head.php");
-    require("../inc/header.php");
-    require("../inc/sidebar.php");
-    require("../core/slider.php");
+    require("../../inc/head.php");
+    require("../../inc/header.php");
+    require("../../inc/sidebar.php");
+    require("../../modules/slider/read.php");
     if(isset($_GET['id'])  &&  is_numeric($_GET['id'])) {
         $id=$_GET['id'];
         $data=getDataById($id);
@@ -14,7 +14,10 @@
  ?>
  <main>
 <div class = "pg-m">
-        <a href="index.php"><i class="fa-solid fa-arrow-left"></i> Sliders</a>
+        <p class = "breadcrumb">
+        <a href="../main/"><i class="fa-solid fa-arrow-left"></i> Dashboard</a> /
+            <a href="index.php"> Sliders</a>
+        </p>
         <h1 class="pg-heading"><i class="fa-solid fa-sliders"></i> Update Slider</h1>
         
 </div>
@@ -22,7 +25,7 @@
     <label for="slidertext">Slider Text: </label>
     <input class="txtin" type="text" id="slidertext" name="slidertext" size="50" value="<?php echo $row['sliderText']; ?> "><br>
     <label for="slidertext">Slider Image:</label>
-    <p style="margin-bottom:10px;margin-top:10px;"><img src="/team1web_project/uploads/slider/<?php echo $row['imgName']; ?>" width="300" height="150"/></p>
+    <p style="margin-bottom:10px;margin-top:10px;"><img src="../../../uploads/slider/<?php echo $row['imgName']; ?>" width="300" height="150"/></p>
     <input type = "file" name = "choosefile"  accept="image/*" onchange="preview_image(event)" /><br>
     <p style="margin-bottom:10px;"><img  id="output_image" width="300" height="150"/></p>
     <input class="btn btn-prim" type = "submit" name="update"/>
@@ -38,7 +41,7 @@
      						
 </form>
 </main>
-<?php require("../inc/footer.php");?>
+<?php require("../../inc/footer.php");?>
 <script type="text/javascript" src="../assets/js/preview.js"></script>
 </body>
 </html>

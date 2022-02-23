@@ -230,7 +230,7 @@ body{
 	  color: #ddd;
   }
   .aside_list-item:hover {
-	background-color: royalblue;
+	background-color: #3299CC;
 	cursor: pointer;
   }
 
@@ -339,6 +339,14 @@ body{
 	top: 20px;
 	right: 20px;
 	cursor: pointer;
+  }
+  .breadcrumb a:hover {
+		color:#3299CC;
+  }
+  label{
+	  font-size: 18px;
+	  font-weight: bold;
+	  text-transform: uppercase;
   }
   @media only screen and (min-width: 750px) {
 	.aside_close-icon {

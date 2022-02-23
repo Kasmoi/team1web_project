@@ -1,8 +1,8 @@
 <?php 
     $title = "Admin Dashboard";
-    require("./inc/head.php");
-    require("./inc/header.php");
-    require("./inc/sidebar.php");
+    require("../../inc/head.php");
+    require("../../inc/header.php");
+    require("../../inc/sidebar.php");
  ?>
 
 <main>
@@ -12,7 +12,7 @@
         <div class="card">Card</div>
     </div>
 </main>
-<?php require("./inc/footer.php");?>
+<?php require("../../inc/footer.php");?>
 <script type="text/javascript" src="./assets/js/sidebar.js"></script>
 </body>
 </html>

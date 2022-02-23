@@ -3,7 +3,7 @@
     require("./inc/head.php");
     $errorMsg = " ";
  ?>
-<form action="./core/login.php" method="post">
+<form action="./modules/auth/login.php" method="post">
         <div class="login-box">
             <h1>Admin Login</h1>
   
