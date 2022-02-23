@@ -145,6 +145,14 @@ body{
   table {
 	  text-align: center;
   }
+  .msg{
+	  color: green;
+	  background-color: whitesmoke;
+	  padding: 20px;
+  }
+ #output_image {
+	 display: none;
+ }
   /* flexing header and footer*/
   .header,
   .footer {
@@ -167,7 +175,6 @@ body{
   .btn {
 	padding: 10px 20px; 
 	color: var(--white);
-	background-color: var(--primary-color);
 	border-radius: 10px;
 	border: none;
 	font-weight: bold;
@@ -177,12 +184,19 @@ body{
   .action-btn {
 	padding: 8px 8px; 
 	color: var(--white);
-	background-color: var(--primary-color);
 	border-radius: 10px;
 	border: none;
 	font-weight: bold;
 	cursor: pointer;
 	letter-spacing: 1px;
+  }
+
+  .btn-prim {
+	background-color:#3299CC;
+  }
+
+  .btn-danger {
+	  background-color: var(--primary-color);
   }
   
   /* flexing aside */

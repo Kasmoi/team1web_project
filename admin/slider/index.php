@@ -9,8 +9,17 @@
 <main>
     <div class = "pg-m">
         <h1 class="pg-heading"><i class="fa-solid fa-sliders"></i> Sliders</h1>
-        <a href="create.php"><button class=" btn addnew"> NEW SLIDER </button></a>
+        <a href="create.php"><button class=" btn addnew btn-prim"> NEW SLIDER </button></a>
     </div>
+    <?php 
+    
+    if (isset($_GET['msg'])) { 
+        echo '<div class="msg">';
+        $msg= $_GET['msg'];
+        echo '<i class="fa-solid fa-check"></i> '.$msg;
+        echo '</div>';
+    }
+    ?>
 <div class = 'datatable'> 
 <table id="table_id" class="display">
     <thead>
@@ -26,6 +35,7 @@
 </table>
     
 </div>
+
     
 </main>
 <?php require("../inc/footer.php");?>
@@ -39,5 +49,6 @@
     );
 } );
 </script>
+
 </body>
 </html>

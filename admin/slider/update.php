@@ -1,23 +1,31 @@
 <?php 
-    $title = "New Slider";
+    $title = "Update Slider";
     require("../inc/head.php");
     require("../inc/header.php");
     require("../inc/sidebar.php");
- ?>
+    require("../core/slider.php");
+    if(isset($_GET['id'])  &&  is_numeric($_GET['id'])) {
+        $id=$_GET['id'];
+        $data=getDataById($id);
+        $row = mysqli_fetch_assoc($data);
 
-<main>
+    }
+    
+ ?>
+ <main>
 <div class = "pg-m">
         <a href="index.php"><i class="fa-solid fa-arrow-left"></i> Sliders</a>
-        <h1 class="pg-heading"><i class="fa-solid fa-sliders"></i> New Slider</h1>
+        <h1 class="pg-heading"><i class="fa-solid fa-sliders"></i> Update Slider</h1>
         
 </div>
 <form class="create-form" action = "../core/slider.php" method = "POST" enctype = "multipart/form-data">
-    <label for="slidertext">Slider Text:</label>
-    <input class="txtin" type="text" id="slidertext" name="slidertext" size="50"><br>
+    <label for="slidertext">Slider Text: </label>
+    <input class="txtin" type="text" id="slidertext" name="slidertext" size="50" value="<?php echo $row['sliderText']; ?> "><br>
     <label for="slidertext">Slider Image:</label>
-    <input type = "file" name = "choosefile" accept="image/*" onchange="preview_image(event)"/><br>
+    <p style="margin-bottom:10px;margin-top:10px;"><img src="/team1web_project/uploads/slider/<?php echo $row['imgName']; ?>" width="300" height="150"/></p>
+    <input type = "file" name = "choosefile"  accept="image/*" onchange="preview_image(event)" /><br>
     <p style="margin-bottom:10px;"><img  id="output_image" width="300" height="150"/></p>
-    <input class="btn btn-prim" type = "submit" name="create"/>
+    <input class="btn btn-prim" type = "submit" name="update"/>
     <?php 
     
     if (isset($_GET['error'])) { 
@@ -29,7 +37,6 @@
     ?> 
      						
 </form>
-
 </main>
 <?php require("../inc/footer.php");?>
 <script type="text/javascript" src="../assets/js/preview.js"></script>
