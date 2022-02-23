@@ -6,7 +6,7 @@ include './incl/header.php';
 
 <!--This is the headers ending.
  add page content inside of the div below -->
-<div class="content container">
+<div class="content container" style="padding: 10px;">
   <div class="row"><div class="col-sm-12">
     <ul class="breadcrumb">
     <li><a href="./index.html">Home</a></li>

@@ -1,5 +1,5 @@
 <?php
-include 'header.php';
+include './incl/header.php';
 $msg="";
 ?>
 <link rel="stylesheet" href="./css/contact.css">
