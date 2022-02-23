@@ -1,0 +1,82 @@
+body{
+  font-family: Roboto;
+}
+.membership{
+  background-color: #CB212E;
+  color: white;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 5px;
+  border-radius: 15px;
+}
+.membership button{
+  border-radius: 15px;
+  margin-bottom: 5px;
+}
+.mem_desc{
+  padding: 5px;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #24272E;
+  text-align: left;
+  color: white;
+  padding-left: 5px;
+}
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+}
+
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #01447e;
+}
+/* Divider */
+
+.divider{
+  height: 200px;
+  width: 100%;
+  color:var(--white);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 35px 0;  }
+
+.divider p{
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 0;
+  letter-spacing: 0.1rem;
+}
+.divider p:first-child{
+  padding-left: 4px;
+  padding-top: 6px;
+}
+.divider p:last-child{
+  padding-left: 8px;
+}
+.dvr-img-01 {
+  background-image: url(../images/divider-background-01.jpg);
+}
+
+.dvr-img-02 {
+  background-image: url(../images/divider-background-02.jpg);
+}

@@ -1,6 +1,6 @@
 <?php
 //needed extra files
-include '../database/querybuilder.php' ;
+require '../database/querybuilder.php' ;
 require("./inc/head.php");
 require("./inc/header.php");
 require("./inc/sidebar.php");
@@ -9,12 +9,14 @@ $title= $_POST['mem_title'];
 $description= $_POST['description'];
 $price= $_POST['price'];
 if (empty($_POST['title']) or empty($_POST['description']) or empty($_POST['price'])) {
-    echo "there is something missing in the input or it the input was wrong";
+    echo "there is something missing in the input or the input was wrong";
+
 }
 //if none of the posts is empty
     else {
-$query="insert into membership (fname, lname, city, groupid)
+$query="insert into membership (title, description, price)
 values('$title', '$description', '$price')";
+//execute query to insert into memberships
 db_query($query);
 echo "New membership added";
 echo "<a href='../view_membership.php' class='top'>view all memberships </a>";
