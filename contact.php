@@ -3,16 +3,6 @@ include './incl/header.php';
 $msg="";
 ?>
 <link rel="stylesheet" href="./css/contact.css">
-<div class="divider dvr-img-01 mtb-10">
-      <div class="container ">
-        <div class="heading pdtb-2-4">
-          <p class="p-border">Contact</p>
-          <p class="txt-primary">Us</p>
-        </div>
-
-      </div>
-
-    </div>
 <div class="content container">
   <div class="row"><div class="col-sm-12">
     <ul class="breadcrumb">
@@ -22,20 +12,20 @@ $msg="";
   </div></div>
   <div class="row">
     <div class="col-sm-6">
-      <!--form doent currently bring you anywhere-->
+      <!--form sends an email to kasmirxmoilanen@gmail.com-->
       <form action="./contact_mail.php">
 
           <label for="fname">First Name</label>
-          <input type="text" id="fname" name="fname" placeholder="Your name.."></input><br>
+          <input type="text" id="fname" name="fname" placeholder="Your name.." required></input><br>
 
           <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="lname" placeholder="Your last name.."></input><br>
+          <input type="text" id="lname" name="lname" placeholder="Your last name.." required></input><br>
 
-          <label for="email">email</label>
-          <input type="email" id="lname" name="email" placeholder="Your email.."></input><br>
+          <label for="email" >email</label>
+          <input type="email" id="lname" name="email" placeholder="Your email.." required></input><br>
 
           <label for="subject">Subject</label>
-          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea><br>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea><br>
 
           <input type="submit" value="Submit"></input>
 
