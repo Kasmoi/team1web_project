@@ -13,6 +13,8 @@
 <input type="text" id="desc" name="desc"><br>
 <label for="email">Email: </label><br>
 <input type="text" id="email" name="email"><br><br>
+<label for="imgName">Image URL: </label><br>
+<input type="text" id="imgName" name="imgName"><br><br>
 <input type="submit" value="add trainer"><br>
 </form>
 <h1>Remove trainer by name</h1>
