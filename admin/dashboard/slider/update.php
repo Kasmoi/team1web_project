@@ -4,6 +4,7 @@
     require("../../inc/header.php");
     require("../../inc/sidebar.php");
     require("../../modules/slider/read.php");
+    
     if(isset($_GET['id'])  &&  is_numeric($_GET['id'])) {
         $id=$_GET['id'];
         $data=getDataById($id);
@@ -26,7 +27,7 @@
     <input class="txtin" type="text" id="slidertext" name="slidertext" size="50" value="<?php echo $row['sliderText']; ?> "><br>
     <label for="slidertext">Slider Image:</label>
     <p style="margin-bottom:10px;margin-top:10px;"><img src="../../../uploads/slider/<?php echo $row['imgName']; ?>" width="300" height="150"/></p>
-    <input type = "file" name = "choosefile"  accept="image/*" onchange="preview_image(event)" /><br>
+    <input type = "file" name = "choosefile"  accept="image/*" onchange="preview_image(event)" value="<?php echo $row['imgName']; ?>" /><br>
     <p style="margin-bottom:10px;"><img  id="output_image" width="300" height="150"/></p>
     <input class="btn btn-prim" type = "submit" name="update"/>
     <?php 

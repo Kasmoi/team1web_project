@@ -30,4 +30,30 @@ require 'connection.php';
 	}
 
 
+	function db_select($query){
+		$data = db_query($query);
+        if($data == false){
+            echo "Database Errors".db_error();
+
+        }else{
+            
+            if(mysqli_num_rows($data) > 0) {
+                return $data;
+              }
+	}
+}
+
+  function db_select_by_id($query){
+		$data = db_query($query);
+		if($data == false){
+            echo "Database Errors".db_error();
+
+        }else{
+            
+            if(mysqli_num_rows($data) === 1) {
+                return $data;
+              }
+  }
+}
+
  ?>

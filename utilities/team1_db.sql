@@ -47,11 +47,11 @@ echo password_hash("password",PASSWORD_DEFAULT);
 -- Rakenne taululle `blog`
 --
 
-CREATE TABLE `blog` (
+CREATE TABLE `blogs` (
   `blogID` int NOT NULL,
-  `title` varchar(50) NOT NULL,
-  `content` varchar(200) NOT NULL,
-  `imgPath` varchar(200) NOT NULL
+  `title` varchar(255) NOT NULL,
+  `content` text NOT NULL,
+  `imgPath` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------

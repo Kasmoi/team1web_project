@@ -1,12 +1,5 @@
 <?php
-function getDataById($id){
-    $query = "select * from sliders where sliderId=".$id;
-    $data = db_query($query);
-    if(mysqli_num_rows($data) === 1) {
-        return $data;
-    }
-
-}
+require 'read.php';
 
 function deleteSlider($id){
         $data=getDataById($id);
@@ -17,11 +10,11 @@ function deleteSlider($id){
         if(db_query($query)){
 
             if(unlink($imgPath) ){
-                header("location:../slider/index.php?msg= Slider Deleted Successfully");
+                header("location:../dashboard/slider/index.php?msg= Slider Deleted Successfully");
                 exit();
             }
         }else {
-            header("location:../slider/index.php?error= Unable to Delete"); 
+            header("location:../dashboard/slider/index.php?error= Unable to Delete"); 
         }
 
 }

@@ -2,7 +2,7 @@
 require '../../../database/querybuilder.php';
 include '../../utils/validate.php';
 function createSlider(){
-    $slider_txt = $_POST["slidertext"];
+    $slider_txt = validate_input($_POST["slidertext"]);
     $file_name = $_FILES["choosefile"]["name"];
     $extensions= array("jpeg","jpg","png");
     $file_ext = pathinfo($file_name, PATHINFO_EXTENSION);

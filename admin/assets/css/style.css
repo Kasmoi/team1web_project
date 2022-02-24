@@ -137,7 +137,7 @@ body{
   .errorMsg {
 	color: var(--primary-color);
 	background-color: whitesmoke;
-	padding: 20px 0 20px 20px;
+	padding: 10px 10px 10px 10px;
   }
   .datatable{
 	  padding: 40px;
@@ -346,7 +346,7 @@ body{
   label{
 	  font-size: 18px;
 	  font-weight: bold;
-	  text-transform: uppercase;
+	  letter-spacing: 1px;
   }
   @media only screen and (min-width: 750px) {
 	.aside_close-icon {

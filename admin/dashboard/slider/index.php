@@ -23,19 +23,27 @@
     ?>
 <div class = 'datatable'> 
 <table id="table_id" class="display">
+    <?php $data=getAllData();
+          if (empty($data)){
+              echo "<h3>No Data Found</h3>";
+              exit();
+        } else { ?>
     <thead>
         <tr>
+            <th>S.No</th>
             <th>Slider Text</th>
             <th>Slider Image</th>
             <th>Actions</th>
         </tr>
     </thead>
     <tbody>
-        <?php $data=selectData();
+        <?php
+         $i = 1;
         // output data of each row
         while($row = mysqli_fetch_assoc($data)) {
             ?>
          <tr>
+         <td><?php echo $i ?></td>
          <td><?php echo $row["sliderText"] ?></td>
          <td><img width="300" height="150" src="../../../uploads/slider/<?php echo $row["imgName"]?>"></td>
          <td>
@@ -45,7 +53,7 @@
                 </form>
                 </td>
                 </tr>
-        <?php } ?>
+        <?php $i++; } } ?>
 
     </tbody>
 </table>
