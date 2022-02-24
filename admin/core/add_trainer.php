@@ -5,7 +5,7 @@ require("./inc/header.php");
 require("./inc/sidebar.php");
 
 $rand = substr(md5(microtime()),rand(0,26),5);
-$trainerID = $_POST[rand];
+$trainerID = $rand;
 $name = $_POST['trainerName'];
 $desc = $_POST['desc'];
 $email = $_POST['email'];
