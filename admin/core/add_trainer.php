@@ -1,10 +1,10 @@
 <?php
-include '../database/querybuilder.php' ;
-require("./inc/head.php");
-require("./inc/header.php");
-require("./inc/sidebar.php");
+require("../inc/head.php");
+require("../inc/header.php");
+require("../inc/sidebar.php");
+require ("../../database/querybuilder.php");
 
-$rand = substr(md5(microtime()),rand(0,26),5);
+$rand = random_int(1, 999);
 $trainerID = $rand;
 $name = $_POST['trainerName'];
 $desc = $_POST['desc'];
@@ -19,7 +19,7 @@ if (empty($_POST['trainerName']) || empty($_POST['desc']) || empty($_POST['email
     db_query($query);
 }
 
-require("./inc/footer.php");
+require("../inc/footer.php");
 ?>
 
 <script type="text/javascript" src="./assets/js/sidebar.js"></script>
