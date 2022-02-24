@@ -1,21 +1,10 @@
 <?php
 //first check if the form was filled
-if (empty($_POST['fname'])) {
-    echo "Please input first name";
+if (empty($_POST['fname']) OR empty($_POST['lname']) OR empty($_POST['email']) OR empty($_POST['subject'])) {
+    echo "some inputs were missing";
     echo "<a href=\"./contact.php\">back to contact page</a>";
 }
-if (empty($_POST['lname'])) {
-    echo "Please input last name<br>";
-    echo "<a href=\"./contact.php\">back to contact page</a>";
-}
-if (empty($_POST['email'])) {
-    echo "Please input email<br>";
-    echo "<a href=\"./contact.php\">back to contact page</a>";
-}
-if (empty($_POST['subject'])) {
-    echo "Please input a message<br>";
-    echo "<a href=\"./contact.php\">back to contact page</a>";
-}
+
 else {
   $fname= $_POST['fname'];
   $lname= $_POST['lname'];
