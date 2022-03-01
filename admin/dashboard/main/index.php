@@ -3,7 +3,8 @@
     require("../../inc/head.php");
     require("../../inc/header.php");
     require("../../inc/sidebar.php");
- ?>
+?>
+ 
 
 <main>
     <div class="main_cards">

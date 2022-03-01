@@ -8,8 +8,12 @@ function createBlog(){
     $extensions= array("jpeg","jpg","png");
     $file_ext = pathinfo($file_name, PATHINFO_EXTENSION);
     $temp_name = $_FILES["img"]["tmp_name"];
- 
-    $folder = "/var/www/html/team1web_project/uploads/blog/".$file_name;
+    //renaming image
+    $randomno = rand(0,10000);
+    $rename = 'blog-image-'.date('Ymdhis').$randomno;
+    $newname = $rename.'.'.$file_ext;
+    //path to upload image
+    $folder = "/var/www/html/team1web_project/uploads/blog/".$newname;
 
     // Validate blog title check if is not empty
     if (empty($title)){
@@ -22,9 +26,6 @@ function createBlog(){
         //// Validate file input to check if is with valid extension
     } else if (!in_array($file_ext,$extensions)) {
         header("location:../../dashboard/blog/create.php?ierror=Upload valiid images. Only PNG and JPEG are allowed.");
-    //checks if image with same name exits
-    } else if (file_exists($folder)) {
-        header("location:../../dashboard/blog/create.php?ierror=Image with same name already exists");
     //// Validate image file size
     } else if (filesize($temp_name) > 2097152) {
         header("location:../../dashboard/blog/create.php?ierror=Image is too large, Upload less than or equal 2MB.");    
@@ -38,7 +39,7 @@ function createBlog(){
             
             // query to insert the name of the image to database
 
-            $sql = "insert into blogs(title,content,imgName) VALUES ('$title','$content','$file_name')";
+            $sql = "insert into blogs(title,content,imgName) VALUES ('$title','$content','$newname')";
 
             //query to the database
             db_query($sql);

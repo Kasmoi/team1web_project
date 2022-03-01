@@ -8,6 +8,7 @@
  ?> 
 <main>
     <div class = "pg-m">
+        <p class="breadcrumb"><a href="../main/"><i class="fa-solid fa-arrow-left"></i> Dashboard</a></p>
         <h1 class="pg-heading"><i class="fa-solid fa-book"></i> Blogs</h1>
         <a href="create.php"><button class=" btn addnew btn-prim"> NEW BLOG </button></a>
     </div>
@@ -36,7 +37,7 @@
          <td><?php echo $i?></td>
          <td><?php echo $row["title"] ?></td>
          <td>
-         <form method = "POST" action="../../modules/slider/actions.php?id=<?php echo $row['blogID'] ?>" >
+         <form method = "POST" action="../../modules/blog/actions.php?id=<?php echo $row['blogID'] ?>" >
                 <input class="btn btn-prim" type = "submit" name="update" value="Update"/>
                 <input class="btn btn-danger" type = "submit" name="delete" value="Delete"/>
                 </form>

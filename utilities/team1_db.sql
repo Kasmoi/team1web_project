@@ -61,7 +61,7 @@ CREATE TABLE `blogs` (
 --
 
 CREATE TABLE `gallery` (
-  `galleryID` int NOT NULL,
+  `imgID` int NOT NULL,
   `imgName` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 

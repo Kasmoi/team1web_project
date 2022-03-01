@@ -26,7 +26,6 @@
     <?php $data=getAllData();
           if (empty($data)){
               echo "<h3>No Data Found</h3>";
-              exit();
         } else { ?>
     <thead>
         <tr>
@@ -62,7 +61,7 @@
 
     
 </main>
-<?php require("../../inc/footer.php");?>
+<?php  require("../../inc/footer.php");?>
 <script>
     $(document).ready( function () {
     $('#table_id').DataTable( {

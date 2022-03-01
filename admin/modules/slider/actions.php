@@ -10,11 +10,11 @@ function deleteSlider($id){
         if(db_query($query)){
 
             if(unlink($imgPath) ){
-                header("location:../dashboard/slider/index.php?msg= Slider Deleted Successfully");
+                header("location:../../dashboard/slider/index.php?msg= Slider Deleted Successfully");
                 exit();
             }
         }else {
-            header("location:../dashboard/slider/index.php?error= Unable to Delete"); 
+            header("location:../../dashboard/slider/index.php?error= Unable to Delete"); 
         }
 
 }
