@@ -46,8 +46,8 @@
       </footer>
   
   
-    
-      <script src="js/nav.js">
+      <script src="./js/slider.js"></script>
+      <script src="./js/nav.js">
       </script>
 
 

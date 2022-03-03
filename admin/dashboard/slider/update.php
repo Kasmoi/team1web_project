@@ -24,7 +24,7 @@
 </div>
 <form class="create-form" action = "../core/slider.php" method = "POST" enctype = "multipart/form-data">
     <label for="slidertext">Slider Text: </label>
-    <input class="txtin" type="text" id="slidertext" name="slidertext" size="50" value="<?php echo $row['sliderText']; ?> "><br>
+    <textarea id="textarea" name="slidertext"><?php echo html_entity_decode($row["sliderText"]); ?></textarea> <br>
     <label for="sliderimage">Slider Image:</label>
     <p style="margin-bottom:10px;margin-top:10px;"><img src="../../../uploads/slider/<?php echo $row['imgName']; ?>" width="300" height="150"/></p>
     <input type = "file" name = "choosefile"  accept="image/*" onchange="preview_image(event)" value="<?php echo $row['imgName']; ?>" /><br>
@@ -44,5 +44,12 @@
 </main>
 <?php require("../../inc/footer.php");?>
 <script type="text/javascript" src="../assets/js/preview.js"></script>
+<script>
+    tinymce.init({
+      selector: '#textarea',
+      menubar:false,
+      branding:false
+    });
+  </script>
 </body>
 </html>

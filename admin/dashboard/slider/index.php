@@ -42,11 +42,11 @@
         while($row = mysqli_fetch_assoc($data)) {
             ?>
          <tr>
-         <td><?php echo $i ?></td>
-         <td><?php echo $row["sliderText"] ?></td>
-         <td><img width="300" height="150" src="../../../uploads/slider/<?php echo $row["imgName"]?>"></td>
+         <td><?php echo $i; ?></td>
+         <td><?php echo html_entity_decode($row["sliderText"]); ?></td>
+         <td><img width="300" height="150" src="../../../uploads/slider/<?php echo $row["imgName"];?>"></td>
          <td>
-         <form method = "POST" action="../../modules/slider/actions.php?id=<?php echo $row['sliderID'] ?>" >
+         <form method = "POST" action="../../modules/slider/actions.php?id=<?php echo $row['sliderID']; ?>" >
                 <input class="btn btn-prim" type = "submit" name="update" value="Update"/>
                 <input class="btn btn-danger" type = "submit" name="delete" value="Delete" onclick="return confirm('Are you sure you want to delete this slider?');"/>
                 </form>

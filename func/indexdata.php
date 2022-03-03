@@ -11,4 +11,10 @@ function getBlogs(){
     return $data;
 }
 
+function getSliders(){
+    $query = "select * from sliders order by sliderID DESC limit 3;";
+    $data = db_select($query);
+    return $data;
+}
+
 ?>

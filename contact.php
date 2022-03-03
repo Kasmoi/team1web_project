@@ -1,5 +1,6 @@
 <?php
 include './incl/header.php';
+include './incl/phead.php';
 $msg="";
 ?>
 <link rel="stylesheet" href="./css/contact.css">
@@ -45,5 +46,5 @@ $msg="";
 </div>
   </div>
   <?php
-  include 'footer.php';
+  include './incl/footer.php';
   ?>
