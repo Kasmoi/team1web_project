@@ -17,4 +17,10 @@ function getAllData($start,$perPage){
     $data = db_select($query);
     return $data;
 }
+
+function getDataById($id){
+    $query = "select * from gallery where imgID=".$id;
+    $data = db_select_by_id($query);
+    return $data;
+    }
 ?>

@@ -1,13 +1,14 @@
 <?php
-require './incl/header.php';
-include ("../Database/querybuilder.php");
+include './incl/phead.php';
+include './incl/header.php';
+
+include ("./database/querybuilder.php");
 $data = "select * from membership";
 //builds the query
 $result=db_query($data);
 ?>
 <!--This is the headers ending.
  add page content inside of the div below -->
- <link href="./css/membership.css" rel="stylesheet">
 <div class="content container">
 
       <!--breadcrumb-->

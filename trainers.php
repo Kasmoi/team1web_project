@@ -1,5 +1,6 @@
 
 <?php
+include './incl/phead.php';
 include './incl/header.php';
 
 ?>

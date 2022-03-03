@@ -3,7 +3,7 @@ require '../../../database/querybuilder.php';
 include '../../utils/validate.php';
 function createBlog(){
     $title = validate_input($_POST["title"]);
-    $content = validate_input($_POST["content"]);
+    $content = $_POST["content"];
     $file_name = $_FILES["img"]["name"];
     $extensions= array("jpeg","jpg","png");
     $file_ext = pathinfo($file_name, PATHINFO_EXTENSION);

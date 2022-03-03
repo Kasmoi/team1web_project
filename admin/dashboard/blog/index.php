@@ -12,7 +12,15 @@
         <h1 class="pg-heading"><i class="fa-solid fa-book"></i> Blogs</h1>
         <a href="create.php"><button class=" btn addnew btn-prim"> NEW BLOG </button></a>
     </div>
-
+    <?php 
+    
+    if (isset($_GET['msg'])) { 
+        echo '<div class="msg">';
+        $msg= $_GET['msg'];
+        echo '<i class="fa-solid fa-check"></i> '.$msg;
+        echo '</div>';
+    }
+    ?>
     <div class = 'datatable'> 
 <table id="table_id" class="display">
     <?php $data=getAllData();
@@ -39,10 +47,10 @@
          <td>
          <form method = "POST" action="../../modules/blog/actions.php?id=<?php echo $row['blogID'] ?>" >
                 <input class="btn btn-prim" type = "submit" name="update" value="Update"/>
-                <input class="btn btn-danger" type = "submit" name="delete" value="Delete"/>
-                </form>
-                </td>
-                </tr>
+                <input class="btn btn-danger" type = "submit" name="delete" value="Delete" onclick="return confirm('Are you sure you want to delete this blog?');"/>
+            </form>
+        </td>
+        </tr>
         <?php $i++;} } ?>
 
     </tbody>

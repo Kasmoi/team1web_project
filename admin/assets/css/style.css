@@ -408,6 +408,9 @@ body{
   .content:hover .middle {
 	opacity: 1;
   }
+  .dbtn:hover .gl-img{
+	  opacity:0.3;
+  }
   .center {
 	text-align: center;
   }

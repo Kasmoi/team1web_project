@@ -19,7 +19,7 @@
         <a href="../main/"><i class="fa-solid fa-arrow-left"></i> Dashboard</a> /
             <a href="index.php"> Sliders</a>
         </p>
-        <h1 class="pg-heading"><i class="fa-solid fa-sliders"></i> Update Slider</h1>
+        <h1 class="pg-heading"><i class="fa-solid fa-slider"></i> Update Slider</h1>
         
 </div>
 <form class="create-form" action = "../core/slider.php" method = "POST" enctype = "multipart/form-data">

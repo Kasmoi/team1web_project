@@ -48,7 +48,7 @@
          <td>
          <form method = "POST" action="../../modules/slider/actions.php?id=<?php echo $row['sliderID'] ?>" >
                 <input class="btn btn-prim" type = "submit" name="update" value="Update"/>
-                <input class="btn btn-danger" type = "submit" name="delete" value="Delete"/>
+                <input class="btn btn-danger" type = "submit" name="delete" value="Delete" onclick="return confirm('Are you sure you want to delete this slider?');"/>
                 </form>
                 </td>
                 </tr>

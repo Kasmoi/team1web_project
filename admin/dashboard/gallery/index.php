@@ -9,6 +9,10 @@ $title = "Gallery";
 ?>
 
 <main>
+<div class = "pg-m">
+        <p class="breadcrumb"><a href="../main/"><i class="fa-solid fa-arrow-left"></i> Dashboard</a></p>
+        <h1 class="pg-heading"><i class="fa-solid fa-images"></i> Gallery</h1>
+    </div>
 <form class="create-form" action="../../modules/gallery/add.php" method="POST" enctype = "multipart/form-data" >
 <?php 
     if (isset($_GET['msg'])) { 
@@ -55,15 +59,12 @@ $title = "Gallery";
                 <div class="middle">
                  <div class="dbtn">
                  <form method = "POST" action="../../modules/gallery/actions.php?id=<?php echo $row['imgID'] ?>" >
-                    <input class="btn btn-danger" type = "submit" name="delete" value="Delete"/>
+                    <input class="btn btn-danger" type = "submit" name="delete" value="Delete" onclick="return confirm('Are you sure you want to delete this image?');"/>
                 </form>
                  </div>
                 </div>
             </div>
-            <?php }  ?>
-            
-            
-        <?php } ?>
+            <?php } } ?>
     </div>       
 </div>
 </main>
