@@ -14,7 +14,7 @@ $result=db_query($data);
       <!--breadcrumb-->
   <div class="row"><div class="col-sm-12">
     <ul class="breadcrumb">
-  <li><a href="./index.html">Home</a></li>
+  <li><a href="./index.php">Home</a></li>
   <li>Membership</li>
 </ul>
   </div></div>
@@ -29,14 +29,6 @@ $result=db_query($data);
       <p>-Access the on site hygiene facilities(access cost without memebership 20€/one time)</p>
       </div>
         <div class="col-sm-3"></div>
-        <div class="membership">
-
-          <h2>membership2</h2>
-          <p>this is the description of
-             this membership</p>
-             <button type="button" name="button">buy this membership</button>
-        </div>
-
     </div>
   </div>
   <div class="row">
