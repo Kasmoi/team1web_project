@@ -1,6 +1,6 @@
 <?php
-
-$title = "Gallery";
+    require("../../modules/auth/checkSession.php");
+    $title = "Gallery";
     require("../../inc/head.php");
     require("../../inc/header.php");
     require("../../inc/sidebar.php");

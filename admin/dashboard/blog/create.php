@@ -1,4 +1,5 @@
 <?php 
+    require("../../modules/auth/checkSession.php");
     $title = "New Blog";
     require("../../inc/head.php");
     require("../../inc/header.php");

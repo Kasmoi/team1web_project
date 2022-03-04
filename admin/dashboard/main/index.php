@@ -1,4 +1,5 @@
 <?php 
+    require("../../modules/auth/checkSession.php");
     $title = "Admin Dashboard";
     require("../../inc/head.php");
     require("../../inc/header.php");

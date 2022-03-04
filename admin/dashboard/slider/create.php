@@ -1,4 +1,5 @@
 <?php 
+    require("../../modules/auth/checkSession.php");
     $title = "New Slider";
     require("../../inc/head.php");
     require("../../inc/header.php");

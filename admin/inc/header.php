@@ -4,5 +4,5 @@
       </div>
       <header class="header">
         <div><p>Welcome Admin</p></div>
-        <div class="header_avatar"><i class="fa-solid fa-user"> </i> Logout </div>
+        <div class="header_avatar"><a href="../../modules/auth/logout.php"><i class="fa-solid fa-user"> </i> Logout</a> </div>
       </header>

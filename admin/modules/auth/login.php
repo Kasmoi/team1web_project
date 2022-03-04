@@ -18,7 +18,7 @@ function login(){
             while($row = mysqli_fetch_assoc($data)){
                 if(password_verify($password,$row['password'])){
                     session_start();
-                    $_SESSION['loggedin'] = true;
+                    $_SESSION['loggedin'] = True;
                     $_SESSION['username'] = $username;
                     header("location:../../dashboard/main/");
                 }else{
