@@ -8,12 +8,6 @@ function createSlider(){
     $file_ext = pathinfo($file_name, PATHINFO_EXTENSION);
     $temp_name = $_FILES["choosefile"]["tmp_name"];
     
-    //renaming images
-    $randomno = rand(0,10000);
-    $rename = 'slider-image-'.date('Ymdhis').$randomno;
-    $newname = $rename.'.'.$file_ext;
-    //path to upload images
-    $folder = "/var/www/html/team1web_project/uploads/slider/".$newname;
 
     // Validate slider text or file input to check if is not empty
     if (empty($slider_txt) || empty($file_name)){
@@ -27,13 +21,18 @@ function createSlider(){
         header("location:../../dashboard/slider/create.php?error=Image is too large, Upload less than or equal 2MB.");    
     } else {
 
-        
+        //renaming images
+        $randomno = rand(0,10000);
+        $rename = 'slider-image-'.date('Ymdhis').$randomno;
+        $newname = $rename.'.'.$file_ext;
+        //path to upload images
+        $folder = "../../../uploads/slider/".$newname;
 
         // if the image is uploaded to the "given" folder" 
 
         if (move_uploaded_file($temp_name, $folder)) {
             
-            // query to insert the name of the image to database
+            // query to insert the sliders data of to database
 
             $sql = "insert into sliders(sliderText,imgName) VALUES ('$slider_txt','$newname')";
 

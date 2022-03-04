@@ -13,7 +13,7 @@ function createBlog(){
     $rename = 'blog-image-'.date('Ymdhis').$randomno;
     $newname = $rename.'.'.$file_ext;
     //path to upload image
-    $folder = "/var/www/html/team1web_project/uploads/blog/".$newname;
+    $folder = "../../../uploads/blog/".$newname;
 
     // Validate blog title check if is not empty
     if (empty($title)){

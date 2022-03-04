@@ -4,7 +4,7 @@ function delGalleryImg($id){
     $data=getDataById($id);
         $row = mysqli_fetch_assoc($data);
 
-        $imgPath = "/var/www/html/team1web_project/uploads/gallery/".$row["imgName"];
+        $imgPath = "../../../uploads/gallery/".$row["imgName"];
         $query = "delete from gallery where imgID=".$row['imgID'];
         if(db_query($query)){
 

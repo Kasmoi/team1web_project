@@ -5,7 +5,7 @@ function deleteBlog($id){
     $data=getDataById($id);
     $row = mysqli_fetch_assoc($data);
 
-    $imgPath = "/var/www/html/team1web_project/uploads/blog/".$row['imgName'];
+    $imgPath = "../../../uploads/blog/".$row['imgName'];
     $query = "delete from blogs where blogId=".$row['blogID'];
     if(db_query($query)){
 

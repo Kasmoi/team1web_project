@@ -15,7 +15,7 @@ function addImages(){
             $rename = 'gallery-image-'.date('Ymdhis').$randomno;
             $newname = $rename.'.'.$file_ext;
             //path to upload images
-            $folder = "/var/www/html/team1web_project/uploads/gallery/".$newname;
+            $folder = "../../../uploads/gallery/".$newname;
 
             // Validate slider text or file input to check if is not empty
             if (empty($file_name)){
