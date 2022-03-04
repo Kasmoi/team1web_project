@@ -25,7 +25,7 @@
 </div>
 <form class="create-form" action = "../../modules/slider/actions.php?id=<?php echo $row['sliderID']?>" method = "POST" enctype = "multipart/form-data">
     <label for="slidertext">Slider Text: </label>
-    <textarea id="textarea" name="slidertext"><?php echo html_entity_decode($row["sliderText"]); ?></textarea> <br>
+    <textarea id="textarea" name="slidertext" required><?php echo html_entity_decode($row["sliderText"]); ?></textarea> <br>
     <label for="sliderimage">Slider Image:</label>
     <p style="margin-bottom:10px;margin-top:10px;"><img src="../../../uploads/slider/<?php echo $row['imgName']; ?>" width="300" height="150"/></p>
     <input type = "file" name = "img"  accept="image/*" onchange="preview_image(event)" value="<?php echo $row['imgName']; ?>" /><br>

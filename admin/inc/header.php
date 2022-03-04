@@ -3,6 +3,6 @@
         <strong> &#9776;</strong>
       </div>
       <header class="header">
-        <div><p>Welcome Admin</p></div>
-        <div class="header_avatar"><a href="../../modules/auth/logout.php"><i class="fa-solid fa-user"> </i> Logout</a> </div>
+        <div><p>Welcome <?php echo $_SESSION['username'];?></p></div>
+        <div class="logout"><a href="../../modules/auth/logout.php"><i class="fa-solid fa-user"> </i> Logout</a> </div>
       </header>

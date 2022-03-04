@@ -23,10 +23,10 @@
         <h1 class="pg-heading"><i class="fa-solid fa-book"></i> Edit Blog</h1>
         
 </div>
- <form class="create-form" action="../../modules/blog/actions.php" method="POST" enctype = "multipart/form-data" >
+ <form class="create-form" action="../../modules/blog/actions.php?id=<?php echo $row['blogID']?>" method="POST" enctype = "multipart/form-data" >
  <label for="title">Title:</label>
  
- <input class="txtin" type="text" id="title" name="title" value="<?php echo $row['title']?>"  size="90"><br>
+ <input class="txtin" type="text" id="title" name="title" value="<?php echo $row['title']?>" required  size="90"><br>
  <?php 
     
     if (isset($_GET['terror'])) { 
@@ -37,7 +37,7 @@
     }
     ?> 
  <label for="textarea">Content:</label>
- <textarea id="textarea" name="content">
+ <textarea id="textarea" name="content" required>
      <?php echo html_entity_decode($row["content"]) ?>
  </textarea> <br>
  <?php 
@@ -62,7 +62,7 @@
     }
     ?>
 <p style="margin-bottom:10px;"><img  id="output_image" width="300" height="150"/></p>
-<input class="btn btn-prim" type = "submit" name="submit"/> 
+<input class="btn btn-prim" type = "submit" name="updateblog"/> 
 </form>
 
 </main>

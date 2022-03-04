@@ -14,7 +14,7 @@
 
 a{
 	text-decoration: none;
-	color: #24272E;
+
 }
 
 body{
@@ -104,7 +104,7 @@ body{
 	grid-area: header;
 	background-color: whitesmoke;
   }
-
+  
   .aside {
 	grid-area: aside;
 	background-color: var(--primary-color);
@@ -341,8 +341,17 @@ body{
 	right: 20px;
 	cursor: pointer;
   }
+  .breadcrumb a {
+	color: #24272E;
+  }
   .breadcrumb a:hover {
 		color:#3299CC;
+  }
+  .logout a {
+	  color: var(--primary-color);
+  }
+  .logout a:hover{
+	  color:#3299CC;
   }
   label{
 	  font-size: 18px;

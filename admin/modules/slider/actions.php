@@ -1,6 +1,6 @@
 <?php
 require 'read.php';
-
+include '../../utils/validate.php';
 function deleteSlider($id){
         $data=getDataById($id);
         $row = mysqli_fetch_assoc($data);
@@ -20,7 +20,7 @@ function deleteSlider($id){
 }
 function doUpdate($id){
 
-    $slider_txt = $_POST["slidertext"];
+    $slider_txt = $_POST["slidertext"] ;
     $file_name = $_FILES["img"]["name"];
     $extensions= array("jpeg","jpg","png");
     $file_ext = pathinfo($file_name, PATHINFO_EXTENSION);
@@ -70,28 +70,33 @@ function doUpdate($id){
 
 }
 
-if(isset($_POST['update'])){
+if (($_SERVER['REQUEST_METHOD'] == 'POST')){
 
-    if(isset($_GET['id'])  &&  is_numeric($_GET['id'])) {
-        $id=$_GET['id'];
-        header("location:../../dashboard/slider/update.php?id=$id");
-    }
+    if(isset($_POST['update'])){
 
- }
- elseif(isset($_POST['delete'])){
+        if(isset($_GET['id'])  &&  is_numeric($_GET['id'])) {
+            $id=$_GET['id'];
+            header("location:../../dashboard/slider/update.php?id=$id");
+        }
     
-    if(isset($_GET['id'])  &&  is_numeric($_GET['id'])) {
-        $id=$_GET['id'];
-        deleteSlider($id);
-    }
- }
- elseif(isset($_POST['updateslider'])){
+     }
+     elseif(isset($_POST['delete'])){
+        
+        if(isset($_GET['id'])  &&  is_numeric($_GET['id'])) {
+            $id=$_GET['id'];
+            deleteSlider($id);
+        }
+     }
+     elseif(isset($_POST['updateslider'])){
+    
+        if(isset($_GET['id'])  &&  is_numeric($_GET['id'])) {
+            $id=$_GET['id'];
+            doUpdate($id);
+        }
+     }
+    
+}
 
-    if(isset($_GET['id'])  &&  is_numeric($_GET['id'])) {
-        $id=$_GET['id'];
-        doUpdate($id);
-    }
- }
 
 
 ?>

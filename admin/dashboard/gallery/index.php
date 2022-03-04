@@ -37,6 +37,19 @@
 </form> 
 <!--Gallery-->
 <div class="container">
+<?php 
+    if (isset($_GET['dmsg'])) { 
+        echo '<div class="msg">';
+        $msg= $_GET['dmsg'];
+        echo '<i class="fa-solid fa-check"></i> '.$msg;
+        echo '</div>';
+    }elseif (isset($_GET['derror'])) { 
+        echo '<p class="errorMsg">';
+        $errorMsg= $_GET['derror'];
+        echo '<i class="fa-solid fa-triangle-exclamation"></i> '.$errorMsg;
+        echo '</p>';
+    }
+    ?>
           <div class="pg-head">
           <h3>Gallery Images </h3>
           <div class="pagination">
