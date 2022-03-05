@@ -18,7 +18,7 @@
  <form class="create-form" action="../../modules/blog/add.php" method="POST" enctype = "multipart/form-data" >
  <label for="title">Title:</label>
  
- <input class="txtin" type="text" id="title" name="title" size="90" required><br>
+ <input class="txtin" type="text" id="title" name="title" size="90"/><br>
  <?php 
     
     if (isset($_GET['terror'])) { 
@@ -29,7 +29,7 @@
     }
     ?> 
  <label for="textarea">Content:</label>
- <textarea id="textarea" name="content" required></textarea> <br>
+ <textarea id="textarea" name="content"></textarea> <br>
  <?php 
     
     if (isset($_GET['cerror'])) { 
@@ -40,7 +40,7 @@
     }
     ?> 
 <label for="image">Image:</label>
-<input id ="image" type = "file" name = "img" accept="image/*" required onchange="preview_image(event)"/><br>
+<input id ="image" type = "file" name = "img" accept="image/*" onchange="preview_image(event)"/><br>
 <?php 
     
     if (isset($_GET['ierror'])) { 
@@ -51,17 +51,7 @@
     }
     ?>
 <p style="margin-bottom:10px;"><img  id="output_image" width="300" height="150"/></p>
-<input class="btn btn-prim" type = "submit" name="submit"/> 
+<input class="btn btn-prim" type = "submit" name="createblog"/> 
 </form>
 
 </main>
-<script>
-    tinymce.init({
-      selector: '#textarea',
-      menubar:false,
-      branding:false
-    });
-  </script>
-  <script type="text/javascript" src="../../assets/js/preview.js"></script>
-</body>
-</html>
