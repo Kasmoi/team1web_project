@@ -66,13 +66,3 @@
 </form>
 
 </main>
-<script>
-    tinymce.init({
-      selector: '#textarea',
-      menubar:false,
-      branding:false
-    });
-  </script>
-  <script type="text/javascript" src="../../assets/js/preview.js"></script>
-</body>
-</html>

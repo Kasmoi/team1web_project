@@ -599,6 +599,38 @@ width: 100%;
     text-align: center;
   }
 
+  /*Membership Page */
+  .mwrapper{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .moptions{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .mcontent p,h3 {
+    margin:10px;
+  }
+  .mcontent p{
+    text-align: justify;
+  }
+  .mcontent{
+    box-shadow: 4px 4px 6px 0  rgba(0,0,0,0.3);
+  }
+  .mcontent, .mbenefits{
+    padding: 20px;
+  }
+  .mbenefits {
+    background-color:var(--primary-color);
+    color: var(--white);
+    margin-left: 20px;
+  }
+  .mbtn{
+    background-color: #23A6D5;
+    border: none;
+    padding: 10px;
+    color:var(--white)
+  }
   /*Media Queries */
 
   @media only screen and (max-width: 720px) {

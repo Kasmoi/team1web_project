@@ -15,6 +15,3 @@
     </div>
 </main>
 <?php require("../../inc/footer.php");?>
-<script type="text/javascript" src="./assets/js/sidebar.js"></script>
-</body>
-</html>

@@ -44,13 +44,3 @@
 </form>
 </main>
 <?php require("../../inc/footer.php");?>
-<script type="text/javascript" src="../assets/js/preview.js"></script>
-<script>
-    tinymce.init({
-      selector: '#textarea',
-      menubar:false,
-      branding:false
-    });
-  </script>
-</body>
-</html>

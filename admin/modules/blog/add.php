@@ -42,9 +42,13 @@ function createBlog(){
             $sql = "insert into blogs(title,content,imgName) VALUES ('$title','$content','$newname')";
 
             //query to the database
-            db_query($sql);
+            if(db_query($sql)){
+                header("location:../../dashboard/blog/index.php?msg=New Blog Added Successfully");  
+            }else{
+                echo db_error();
+            }
 
-            header("location:../../dashboard/blog/index.php?msg=New Blog Added Successfully");
+            
 
         }else {
             header("location:../../dashboard/blog/create.php?error=Problem in adding Blog.Try again");
@@ -59,7 +63,7 @@ function createBlog(){
     
 if (($_SERVER['REQUEST_METHOD'] == 'POST')){
 
-     if(isset($_POST['submit'])){
+     if(isset($_POST['createblog'])){
         createBlog();
 
     }

@@ -1,70 +1,45 @@
 <?php
-include './incl/phead.php';
+$title = "Memberships";
+$activePage = "membership";
+include './incl/ihead.php';
 include './incl/header.php';
 
 include ("./database/querybuilder.php");
-$data = "select * from membership";
+$query = "select * from memberships";
 //builds the query
-$result=db_query($data);
+$mdata=db_select($query);
+//header
+$bgclass = "dvr-bg-01";
+$dtitle = "Membership Options";
+include './incl/divider.php';
 ?>
-<!--This is the headers ending.
- add page content inside of the div below -->
-<div class="content container">
-
-      <!--breadcrumb-->
-  <div class="row"><div class="col-sm-12">
-    <ul class="breadcrumb">
-  <li><a href="./index.html">Home</a></li>
-  <li>Membership</li>
-</ul>
-  </div></div>
-  <!--main content of this page-->
-  <div class="row">
-    <div class="col-sm-3"></div>
-    <div class="col-sm-6">
-      <div class="mem_desc">
-      <h2>Memberships include:</h2>
-      <p>-Access card to the gym so you can visit whenever you want</p>
-      <p>-Free use of the swimming pool(otherwise pool access 10€/h)</p>
-      <p>-Access the on site hygiene facilities(access cost without memebership 20€/one time)</p>
+<div class="mcontainer pd-2-5">
+  <div class="mwrapper">
+    <div class="moptions">
+      <?php 
+          if (empty($mdata)){
+              echo "<h3>No Membership Data To Display </h3>";
+              
+        } else {
+        // output data of each row
+        while($mrow = mysqli_fetch_assoc($mdata)){
+            ?>
+      <div class="mcontent">
+          <h3><?php echo $mrow['title'];?></h3>
+          <?php echo html_entity_decode($mrow['description']); ?>
+          <p>Starts from <strong> £ <?php echo $mrow['price'];?></strong> </p>
+          <button class="mbtn">Join Now</button>
       </div>
-        <div class="col-sm-3"></div>
-        <div class="membership">
-
-          <h2>membership2</h2>
-          <p>this is the description of
-             this membership</p>
-             <button type="button" name="button">buy this membership</button>
-        </div>
-
+      <?php } } ?>
+    </div>
+    <div class="mbenefits">
+      <h3>Memberships include:</h3>
+      <p>-Access card to the gym </p>
+      <p>-Free use of the swimming pool</p>
+      <p>-Access to sauna and other facility</p>
+      <p>-Personal Trainer</p>
     </div>
   </div>
-  <div class="row">
-    <?php
-    if($result ->num_rows > 0) {
-    //echo membership options
-        while($row = $result ->fetch_assoc()){
-    echo "<div class=\"col-sm-4\">
-            <div class=\"membership\">
-            <h2>".$row["title"]."</h2>
-            <p>".$row["description"]."</p>
-            <button type=\"button\" name=\"button\"> buy for".$row["price"]."€</button>
-            </div>
-          </div>";
-        }
-    }
-    else
-    {
-        echo "there are no memberships or something went wrong";
-    }
-    ?>
 </div>
-
-
-
-
-</div>
-
-
 <!--footer starts here-->
 <?php include './incl/footer.php'; ?>

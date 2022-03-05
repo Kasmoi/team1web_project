@@ -62,15 +62,3 @@
     
 </main>
 <?php require("../../inc/footer.php");?>
-<script>
-    $(document).ready( function () {
-    $('#table_id').DataTable( {
-        "searching":false,
-
-    }
-       
-    );
-} );
-</script>
-</body>
-</html>
