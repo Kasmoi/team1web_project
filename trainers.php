@@ -1,51 +1,45 @@
 
 <?php
-include './incl/phead.php';
+$title = "Trainers";
+$activePage = "trainers";
+include './incl/ihead.php';
 include './incl/header.php';
 include ("./database/querybuilder.php");
-$data = "select * from trainers";
+$query = "select * from trainers";
 //builds the query
-$result=db_query($data);
+$tdata=db_select($query);
+$bgclass = "dvr-bg-01";
+$dtitle = "Meet Trainers";
+include './incl/divider.php';
 ?>
 
-<!--This is the headers ending.
- add page content inside of the div below -->
-<div class="content container" style="padding: 10px;">
-  <div class="row"><div class="col-sm-12">
-    <ul class="breadcrumb">
-    <li><a href="./index.php">Home</a></li>
-    <li>trainers</li>
-    </ul>
-  </div></div>
-<div class="container">
+<div class="mcontainer pd-2-5">
+<div class="tcontent">
+<?php 
+          if (empty($tdata)){
+              echo "<h3>No Trainers Data To Display </h3>";
+              
+        } else {
+        // output data of each row
+        while($trow = mysqli_fetch_assoc($tdata)){
+            ?>
+  <div class="tinfo">
+      <div class="img">
+      <img class="timg" src="./uploads/trainer/<?php echo $trow["imgName"]?>" alt="trainer-image" >
+      </div>
+      <div class="txtinfo">
+      <h3><?php echo $trow['name'];?></h3>
+      <?php echo html_entity_decode($trow['description']); ?>
+      <p><strong> Email: </strong> <?php echo $trow['email'];?> </p>
+      <button class="mbtn">Contact</button></h3>
+      </div>
+      
+  </div>
+<?php }} ?>
+</div>
+</div>
 
-  <?php
-  if($result ->num_rows > 0) {
-  //echo membership options
-      while($row = $result ->fetch_assoc()){
-  echo "<div class=\"row\">
-          <div class=\"col-sm-6\">
-          <div class=\"trainer_text\">
-          <p>short description<br>".$row["description"]."</p>
-          <p>Name: ".$row["name"]."</p>
-          <p>Email: ".$row["email"]."</p>
-          <button type=\"button\" class=\"btn btn-danger\">
-              Contact
-            </button>
-          </div>
-        </div>
-        <div class=\"col-sm-6\">
-        <img class=\"trainerpic\" src=\"".$row["imgName"]."\">
-        </div></div>";
-      }
-  }
-  else
-  {
-      echo "there are no trainers or something went wrong";
-  }
-  ?>
-</div>
-</div>
+  
 
 <!--footer starts here-->
 <?php include './incl/footer.php'; ?>

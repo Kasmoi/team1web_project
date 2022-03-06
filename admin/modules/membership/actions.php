@@ -55,8 +55,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST')){
                     header("location:../../dashboard/membership/?msg= Membership Updated Successfully"); 
                     
                 }else{
-                    $error = db_error();
-                    header("location:../../dashboard/membership/update.php/?id=$id & error=$error");
+                    header("location:../../dashboard/membership/update.php/?id=$id & error=Something went wrong");
                 }
             }    
             

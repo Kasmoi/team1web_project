@@ -32,6 +32,7 @@ function doUpdate($id){
         header("location:../../dashboard/slider/update.php?id=$id & error=Slider text can't be empty");
     }  
 
+    //if file is not empty(changed) 
     if(!empty($file_name)){
 
         if (!in_array($file_ext,$extensions)) {
@@ -53,6 +54,7 @@ function doUpdate($id){
             
 
         }
+    //if unchanged set the file name same to previous image
     }else{
         $file_name = $row['imgName'];
     }

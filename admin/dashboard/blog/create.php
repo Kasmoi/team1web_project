@@ -55,3 +55,4 @@
 </form>
 
 </main>
+<?php require("../../inc/footer.php");?>
