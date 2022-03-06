@@ -1,8 +1,7 @@
 <?php
 //first check if the form was filled
 if (empty($_POST['fname']) OR empty($_POST['lname']) OR empty($_POST['email']) OR empty($_POST['subject'])) {
-    echo "some inputs were missing";
-    echo "<a href=\"./contact.php\">back to contact page</a>";
+    header("location:contact.php?error=All fields are required");
 }
 
 else {
