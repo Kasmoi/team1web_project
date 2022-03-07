@@ -13,12 +13,6 @@ $bgclass = "dvr-bg-01";
 $dtitle = "Membership Options";
 include './incl/divider.php';
 ?>
-<div class="row"><div class="col-sm-12">
-  <ul class="breadcrumb">
-<li><a href="./index.php">Home</a></li>
-<li>Contact</li>
-</ul>
-</div></div>
 <div class="mcontainer pd-2-5">
   <div class="mwrapper">
     <div class="moptions">

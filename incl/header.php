@@ -11,7 +11,7 @@
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-    
+
               </div>
               <ul class="nav">
                 <li class="nav-item">
@@ -27,17 +27,14 @@
                   <a href = "blogs.php" class="<?php if($activePage == "blogs"){echo "nactive";}else{echo " ";} ?>">Fitness Tips</a>
                 </li>
                 <li class="nav-item">
-                  <a href = "gallery.php" class="<?php if($activePage == "gallery"){echo "nactive";}else{echo " ";} ?>">Gallery</a>
-                </li>
-                <li class="nav-item">
                   <a href = "contact.php" class="<?php if($activePage == "contact"){echo "nactive";}else{echo " ";} ?>">Contact Us</a>
                 </li>
               </ul>
             </nav>
           </div>
-          
+
         </div>
-  
-      
+
+
       </header>
       <!--Navigation End-->

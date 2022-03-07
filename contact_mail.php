@@ -16,8 +16,8 @@ else {
   $msg = wordwrap($msg,70);
 
   // send email
-  mail($email,$email."sent a contact request",$msg);
-  header("location:../contact.php?msg=message sent successfully")
+  mail("dpngtm@gmail.com",$email."sent a contact request",$msg);
+  header("location:../contact.php?msg=message sent successfully");
 }
 
 ?>
